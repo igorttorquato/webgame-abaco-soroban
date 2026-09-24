@@ -894,10 +894,11 @@
   function checkAnswer(){
     if(awaitingNext) return;
     if(currentTotal() === currentAnswer){
-      score += (difficulty === "advanced") ? 35 : 10;
+      var pointsEarned = (difficulty === "advanced") ? 35 : 10;
+      score += pointsEarned;
       scoreEl.textContent = score;
       savePlayerScore(currentPlayer, score);
-      feedbackEl.textContent = "Isso mesmo! +10 pontos";
+      feedbackEl.textContent = "Isso mesmo! +" + pointsEarned + " pontos";
       feedbackEl.className = "feedback correct";
       awaitingNext = true;
       operationEl.classList.add("fading");
