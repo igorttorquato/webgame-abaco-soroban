@@ -894,7 +894,7 @@
   function checkAnswer(){
     if(awaitingNext) return;
     if(currentTotal() === currentAnswer){
-      score += 10;
+      score += (difficulty === "advanced") ? 35 : 10;
       scoreEl.textContent = score;
       savePlayerScore(currentPlayer, score);
       feedbackEl.textContent = "Isso mesmo! +10 pontos";
