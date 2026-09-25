@@ -1,0 +1,7 @@
+# Configuração real do Firebase — nunca comitar.
+# Use config.example.js como modelo para recriar este arquivo.
+config.js
+
+# Arquivos comuns de SO/editor
+.DS_Store
+Thumbs.db
